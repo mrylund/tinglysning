@@ -31,5 +31,22 @@ def get_session_cookies():
       driver.quit()
       sys.exit("Error: Login took too long, exiting...")
   
+  # Get cookies from browser and define a dictionary for the cookies we need
+  cookies = driver.get_cookies()
+  cookie_dict = {}
+  
+  # Add the cookies we need to the dictionary
+  for cookie in cookies:
+    if cookie['name'] == 'TDK_JSESSIONID' or cookie['name'] == 'TDK_CSRFTOKEN':
+      cookie_dict[cookie['name']] = cookie['value']
 
+  # Check if cookie_dict contains the cookies we need
+  if not ('TDK_JSESSIONID' in cookie_dict and 'TDK_CSRFTOKEN' in cookie_dict):
+    sys.exit("Error: Missing session information in the cookies, exiting...")
+    
+  # Quit the browser, we don't need it anymore
   driver.quit()
+  
+  return cookie_dict
+
+  
