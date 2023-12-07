@@ -16,8 +16,8 @@ def get_session_cookies(config):
   """  
   # Define options for Chrome driver
   options = webdriver.ChromeOptions()
-  options.add_argument("--log-level=3")
-  options.add_argument("window-size=600,1000")
+  for argument in config["selenium"]["chrome_options"]:
+    options.add_argument(argument)
 
   # Get the latest version of Chrome driver and install it
   s = Service(ChromeDriverManager().install())
