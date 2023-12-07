@@ -7,6 +7,13 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 def get_session_cookies():
+  """Get the session cookies needed to make requests to tinglysning.dk
+
+  Returns
+  -------
+  dict
+      Dictionary containing the cookies needed to make requests to tinglysning.dk
+  """  
   # Define options for Chrome driver
   options = webdriver.ChromeOptions()
   options.add_argument("--log-level=3")
@@ -48,5 +55,3 @@ def get_session_cookies():
   driver.quit()
   
   return cookie_dict
-
-  
