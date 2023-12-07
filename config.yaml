@@ -1,0 +1,8 @@
+error_messages:
+  nemlog_in_timeout: "Error: Login took too long, exiting..."
+  insufficient_cookies: "Error: Missing session information in the cookies, exiting..."
+
+tinglysning:
+  nemlog_in_redirect_url: "https://www.tinglysning.dk/tmv/"
+  nemlog_in_success_string: "tinglysning.dk"
+  nemlog_in_login_url_start: "https://nemlog-in"
