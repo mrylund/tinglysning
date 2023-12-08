@@ -12,3 +12,8 @@ tinglysning:
   nemlog_in_redirect_url: "https://www.tinglysning.dk/tmv/"
   nemlog_in_success_string: "tinglysning.dk"
   nemlog_in_login_url_start: "https://nemlog-in"
+
+
+rest:
+  urls:
+    get_property: "https://www.tinglysning.dk/tinglysning/rest/ejendom/hovednoteringsnummer?hovednoteringsnummer={0}"

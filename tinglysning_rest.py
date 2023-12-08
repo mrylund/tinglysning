@@ -28,3 +28,9 @@ def __get_request_url(url, cookies, config):
     return res.json()
   elif res.headers['content-type'].find("application/xml") != -1:
     return xmltodict.parse(res.content)
+
+def get_property(config, cookies, hovednoteringsnummer):
+  url = config["rest"]["urls"]["get_property"].format(hovednoteringsnummer)
+  res = __get_request_url(url, cookies, config)
+    
+  return res
