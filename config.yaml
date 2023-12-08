@@ -1,6 +1,7 @@
 error_messages:
   nemlog_in_timeout: "Error: Login took too long, exiting..."
   insufficient_cookies: "Error: Missing session information in the cookies, exiting..."
+  error_5xx: "Error: Tinglysning returned an error 5xx, exiting..."
 
 selenium:
   chrome_options:
