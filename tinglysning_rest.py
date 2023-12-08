@@ -34,3 +34,9 @@ def get_property(config, cookies, hovednoteringsnummer):
   res = __get_request_url(url, cookies, config)
     
   return res
+
+def get_property_summary(config, cookies, uuid):
+  url = config["rest"]["urls"]["get_property_summary"].format(uuid)
+  res = __get_request_url(url, cookies, config)
+
+  return res

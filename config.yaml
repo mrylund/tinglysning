@@ -17,3 +17,4 @@ tinglysning:
 rest:
   urls:
     get_property: "https://www.tinglysning.dk/tinglysning/rest/ejendom/hovednoteringsnummer?hovednoteringsnummer={0}"
+    get_property_summary: "https://www.tinglysning.dk/tinglysning/rest/ejdsummarisk/{0}"
